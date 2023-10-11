@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_usuarios" action="" method="post">
+        <label for="in_nombre_usuarios">Nombre: </label>
+        <input type="text" name="nombre_usuarios" id="in_nombre_usuarios">
+        <label for="in_telefono_usuarios">Teléfono: </label>
+        <input type="varchar" name="telefono_usuarios"         id="in_telefono_usuarios">
+        <label for="in_correo_usuarios">Correo</label>
+        <input type="mail" name="correo_usuarios"    id="in_correo_usuarios">
+        <label for="contrasena_usuarios">Contraseña</label>
+        <input type="password" name="contrasena_usuarios" id="in_contrasena_usuarios">        
+        <br>
+        <label for="in_a_paterno_usuarios">Apellido paterno</label>
+        <input type="text" name="a_paterno_usuarios" id="in_a_paterno_usuarios">
+        <br>
+        <label for="in_a_materno_usuarios">Apellido materno</label>
+        <input type="text" name="a_materno_usuarios"   id="in_hora_evento">
+        <br> 
+        <label for="in_genero_usuarios">Género</label>
+        <input type="text" name="genero_usuarios"   id="in_genero_usuarios">
+        
+    <br>
+    <label for="in_fecha_nacimiento_usuarios">Fecha de nacimiento: </label>
+    <input type="date" name="fecha_nacimiento_usuarios" id="in_fecha_nacimiento_usuarios"> 
+    </br>
+    <br>
+        <input type="submit" value="Guardar">
+    </br>
+     </form>
+
+     <table>
+        <thead>
+            <th>
+                id
+            </th>
+            <th><!--es para los encabezados-->
+                Nombre
+            </th>
+            <th>
+                Teléfono
+            </th>
+            <th>
+                Correo
+            </th>
+            <th>
+                Apellido paterno
+            </th>
+            <th>
+                Apellido materno
+            </th>
+            <th>
+                Género
+            </th>
+            <th>
+                Fecha de nacimiento
+            </th>
+        </thead>
+        <tbody id="tb_us">
+            
+        </tbody>
+     </table>
+     
+     <script src="jquery.js"></script>
+     <script src="usuarios.js"></script><!--Agregando funcionalidades de Javascript--> 
+    
+</body>
+</html>

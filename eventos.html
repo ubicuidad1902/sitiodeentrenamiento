@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_eventos" action="" method="post">
+        <label for="in_titulo_eventos">Nombre: </label>
+        <input type="text" name="titulo_eventos" id="in_titulo_eventos">
+        <label for="in_resena_eventos">Reseña: </label>
+        <input type="text" name="resena_eventos"         id="in_resena_eventos">
+        <label for="in_sub_titulo_eventos">Subtítulo</label>
+        <input type="text" name="sub_titulo_eventos"    id="in_sub_titulo_eventos">
+        <label for="in_categoria">Categoría: </label>
+        <select name="categoria" id="in_categoria">
+            <option value="">Elige una categoría</option>
+            <option value="r">Religioso</option>
+            <option value="c">Civil</option>
+        </select>
+        <br>
+        <label for="in_fecha_evento">Fecha evento</label>
+        <input type="date" name="fecha_evento" id="in_fecha_evento">
+        <br>
+        <label for="">Hora</label>
+        <input type="time" name="hora_evento"   id="in_hora_evento">
+        <br> 
+        <input type="submit" value="Guardar">
+     </form>
+
+     <table>
+        <thead>
+            <th>
+                id
+            </th>
+            <th><!--es para los encabezados-->
+                Título
+            </th>
+            <th>
+                Reseña
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Likes
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Eliminar
+            </th>
+        </thead>
+        <tbody id="tb_ev">
+            
+        </tbody>
+     </table>
+     
+     <script src="jquery.js"></script>
+     <script src="eventos.js"></script><!--Agregando funcionalidades de Javascript--> 
+    
+</body>
+</html>

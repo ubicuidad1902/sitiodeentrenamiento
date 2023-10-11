@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_personajes" action="" method="post">
+        <label for="in_nombre_personajes">Nombre: </label>
+        <input type="text" name="nombre_personajes" id="in_nombre_personajes">
+        <label for="in_resena_personajes">Resena: </label>
+        <input type="text" name="resena_personajes"
+        id="in_resena_personajes">
+        <input type="submit" value="Guardar">
+     </form>
+
+     <table>
+        <thead>
+            <th>
+                id
+            </th>
+            <th><!--es para los encabezados-->
+                Nombre
+            </th>
+            <th>
+                Reseña
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Likes
+            </th>
+        </thead>
+        <tbody id="tb_per">
+            
+        </tbody>
+     </table>
+     
+     <script src="jquery.js"></script>
+     <script src="personajes.js"></script><!--Agregando funcionalidades de Javascript--> 
+    
+</body>
+</html>

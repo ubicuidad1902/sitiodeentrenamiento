@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_efemerides" action="" method="post">
+        <label for="in_titulo_efemerides">Nombre: </label>
+        <input type="text" name="titulo_efemerides" id="in_titulo_efemerides">
+        <label for="in_resena_efemerides">Resena: </label>
+        <input type="text" name="resena_efemerides"
+        id="in_resena_efemerides">
+        <input type="submit" value="Guardar">
+     </form>
+
+     <table>
+        <thead>
+            <th>
+                id
+            </th>
+            <th><!--es para los encabezados-->
+                Título
+            </th>
+            <th>
+                Reseña
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Likes
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Eliminar
+            </th>
+        </thead>
+        <tbody id="tb_ef">
+            
+        </tbody>
+     </table>
+     
+     <script src="jquery.js"></script>
+     <script src="efemerides.js"></script><!--Agregando funcionalidades de Javascript--> 
+    
+</body>
+</html>

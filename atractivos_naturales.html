@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_atractivos_naturales" action="" method="post">
+        <label for="in_nombre_atractivos_naturales">Nombre: </label>
+        <input type="text" name="nombre_atractivos_naturales" id="in_nombre_atractivos_naturales">
+        <label for="in_ubicacion_atractivos_naturales">ubicacion: </label>
+        <input type="text" name="ubicacion_atractivos_naturales"
+        id="in_ubicacion_atractivos_naturales">
+        <input type="submit" value="Guardar">
+     </form>
+
+     <div>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Ubicación</th>
+                <th>Likes</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+
+            </thead>
+            <tbody id="tb_an">
+
+            </tbody>
+        </table>
+     </div>
+     
+     <script src="jquery.js"></script>
+     <script src="atractivos_naturales.js"></script><!--Agregando funcionalidades de Javascript--> 
+    
+</body>
