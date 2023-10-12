@@ -52,15 +52,46 @@ $(document).ready(function () {
                                 <button type="button">Editar</button>
                             </td>
                             <td>
-                                <button type="button">Eliminar</button>
+                                <button class="eliminar" id_usuario="${usuarios.idusuarios}" type="button">Eliminar</button>
                             </td>
                         </tr>
                         
                         `
                     }
                     $("#tb_us").html(registros)//estoy arrastrando el cuerpo de la tabla.
+
+                     $(".eliminar").click(function (e) { 
+                        e.preventDefault();
+                        let id_usuario = $(this)[0].attributes[1].value
+                        eliminar_usuario(id_usuario)
+                     });
                 } else {
                     console.log("Datos no cargados por: " + response.mensaje)
+                }
+            }
+        });
+    }
+
+    function eliminar_usuario(id_usuario){
+        let datos = {
+            'id_usuario': id_usuario
+        }    
+
+        $.ajax({
+            type: "POST",
+            url: "eliminar_us.php",
+            data: datos,
+            dataType: "JSON",
+            error: function(xhr, status){
+                console.log(xhr.responseText)
+            },
+            success: function (response) {
+                if (response.response === "exito") {
+                    console.log('Datos eliminados')
+                    traer_todos_us()//función que carga los datos de la base de datos en una tabla que se carga en el archivo html.
+                
+                } else {
+                    console.log("Datos no eliminados por: " + response.mensaje)
                 }
             }
         });
