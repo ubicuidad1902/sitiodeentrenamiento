@@ -24,7 +24,7 @@ echo json_encode($respuesta);
 
 function traer_todos_us($conn)
 {
-    $sql = "SELECT * FROM eventos";
+    $sql = "SELECT * FROM usuarios";
     $resultado = $conn->query($sql); //me traje todo de configuración pues todas las veces que yo necesite revisar una base de datos voy a utilizar la conexión.
     return ($resultado && $resultado->num_rows ? $resultado : false); //ternarios
 

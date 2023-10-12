@@ -38,7 +38,7 @@ echo json_encode($respuesta);
 
 function crear_usuarios($nombre, $telefono, $correo, $a_paterno, $a_materno, $fecha_nacimiento, $genero, $idroles, $contrasena, $conn)
 {
-    $sql = "INSERT INTO usuarios(nombre, telefono, correo, a_paterno, a_materno, fecha_nacimiento, genero, idroles, contrasena) VALUES ('$nombre', '$telefono', '$correo', '$a_paterno', '$a_materno', '$fecha_nacimiento', '$genero', $idroles, '$contrasena')";
+    $sql = "INSERT INTO usuarios(nombre, telefono, correo, a_paterno, a_materno, fecha_nacimiento, genero, idroles, password) VALUES ('$nombre', '$telefono', '$correo', '$a_paterno', '$a_materno', '$fecha_nacimiento', '$genero', $idroles, '$contrasena')";
     $resultado = $conn->query($sql); //me traje todo de configuración pues todas las veces que yo necesite revisar una base de datos voy a utilizar la conexión.
     return ($resultado && $conn->affected_rows ? true : false); //ternarios
 
