@@ -42,18 +42,21 @@ $(document).ready(function () {
                                 <button type="button">Editar</button>
                             </td>
                             <td>
-                                <button type="button">Eliminar</button>
+                                <button class="eliminar" id_usuario="${atractivo.idatractivos_naturales}" type="button">Eliminar</button>
                             </td>
                         </tr>
                         
                         `
                     }
                     $("#tb_an").html(registros)//estoy arrastrando el cuerpo de la tabla.
+
                     $(".eliminar").click(function (e) { 
                         e.preventDefault();
                         let id_atractivos_naturales = $(this)[0].attributes[1].value
-                        eliminar_atractivos_naturales(id_atractivos_naturales)
+                        console.log(id_atractivos_naturales)
+                        //eliminar_atractivos_naturales(id_atractivos_naturales)
                      });
+
                 } else {
                     console.log("Datos no cargados por: " + response.mensaje)
                 }
