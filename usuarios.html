@@ -1,73 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-    <form id="form_usuarios" action="" method="post">
-        <label for="in_nombre_usuarios">Nombre: </label>
-        <input type="text" name="nombre_usuarios" id="in_nombre_usuarios">
-        <label for="in_telefono_usuarios">Teléfono: </label>
-        <input type="varchar" name="telefono_usuarios"         id="in_telefono_usuarios">
-        <label for="in_correo_usuarios">Correo</label>
-        <input type="mail" name="correo_usuarios"    id="in_correo_usuarios">
-        <label for="in_contrasena_usuarios">Contraseña</label>
-        <input type="password" name="contrasena_usuarios" id="in_contrasena_usuarios">        
-        <br>
-        <label for="in_a_paterno_usuarios">Apellido paterno</label>
-        <input type="text" name="a_paterno_usuarios" id="in_a_paterno_usuarios">
-        <br>
-        <label for="in_a_materno_usuarios">Apellido materno</label>
-        <input type="text" name="a_materno_usuarios"   id="in_hora_evento">
-        <br> 
-        <label for="in_genero_usuarios">Género</label>
-        <input type="text" name="genero_usuarios"   id="in_genero_usuarios">
-        
-    <br>
-    <label for="in_fecha_nacimiento_usuarios">Fecha de nacimiento: </label>
-    <input type="date" name="fecha_nacimiento_usuarios" id="in_fecha_nacimiento_usuarios"> 
-    </br>
-    <br>
-        <input type="submit" value="Guardar">
-    </br>
-     </form>
 
-     <table>
-        <thead>
-            <th>
-                id
-            </th>
-            <th><!--es para los encabezados-->
-                Nombre
-            </th>
-            <th>
-                Teléfono
-            </th>
-            <th>
-                Correo
-            </th>
-            <th>
-                Apellido paterno
-            </th>
-            <th>
-                Apellido materno
-            </th>
-            <th>
-                Género
-            </th>
-            <th>
-                Fecha de nacimiento
-            </th>
-        </thead>
-        <tbody id="tb_us">
-            
-        </tbody>
-     </table>
-     
-     <script src="jquery.js"></script>
-     <script src="usuarios.js"></script><!--Agregando funcionalidades de Javascript--> 
-    
+<body>
+    <div class="container">
+        <form id="form_usuarios" action="" method="post">
+            <div class="mb-3">
+                <label for="in_nombre_usuarios" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre_usuarios" id="in_nombre_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_a_paterno_usuarios" class="form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" name="a_paterno_usuarios" id="in_a_paterno_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_a_materno_usuarios" class="form-label">Apellido Materno</label>
+                <input type="text" class="form-control" name="a_materno_usuarios" id="in_a_materno_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_telefono_usuarios" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" name="telefono_usuarios" id="in_telefono_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_correo_usuarios" class="form-label">Correo</label>
+                <input type="email" class="form-control" name="correo_usuarios" id="in_correo_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_contrasena_usuarios" class="form-label">contraseña</label>
+                <input type="password" class="form-control" name="contrasena_usuarios" id="in_contrasena_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_fecha_nacimiento_usuarios" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" name="fecha_nacimiento_usuarios"
+                    id="in_fecha_nacimiento_usuarios">
+            </div>
+            <div class="mb-3">
+                <label for="in_genero_usuarios" class="form-label">Género</label>
+                <select name="genero_usuarios" id="in_genero_usuarios" class="form-control">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="LGBTIQA+">LGBTIQA+</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary" value="Guardar">
+            </div>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+                <th>
+                    id
+                </th>
+                <th><!--es para los encabezados-->
+                    Nombre
+                </th>
+                <th>
+                    Teléfono
+                </th>
+                <th>
+                    Correo
+                </th>
+                <th>
+                    Apellido paterno
+                </th>
+                <th>
+                    Apellido materno
+                </th>
+                <th>
+                    Género
+                </th>
+                <th>
+                    Fecha de nacimiento
+                </th>
+                <th>Acción</th>
+                <th>Acción</th>
+            </thead>
+            <tbody id="tb_us">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <script src="usuarios.js"></script><!--Agregando funcionalidades de Javascript-->
+
 </body>
+
 </html>

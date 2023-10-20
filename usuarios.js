@@ -49,10 +49,10 @@ $(document).ready(function () {
                             <td>${usuarios.fecha_nacimiento}</td>
                             <td>${usuarios.genero}</td>
                             <td>
-                                <button type="button">Editar</button>
+                                <button class="btn btn-warning" type="button">Editar</button>
                             </td>
                             <td>
-                                <button class="eliminar" id_usuario="${usuarios.idusuarios}" type="button">Eliminar</button>
+                                <button class="btn btn-danger eliminar" id_usuario="${usuarios.idusuarios}" type="button">Eliminar</button>
                             </td>
                         </tr>
                         
