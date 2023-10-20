@@ -49,6 +49,11 @@ $(document).ready(function () {
                         `
                     }
                     $("#tb_an").html(registros)//estoy arrastrando el cuerpo de la tabla.
+                    $(".eliminar").click(function (e) { 
+                        e.preventDefault();
+                        let id_atractivos_naturales = $(this)[0].attributes[1].value
+                        eliminar_atractivos_naturales(id_atractivos_naturales)
+                     });
                 } else {
                     console.log("Datos no cargados por: " + response.mensaje)
                 }
