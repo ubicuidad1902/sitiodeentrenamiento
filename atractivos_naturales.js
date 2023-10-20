@@ -53,12 +53,36 @@ $(document).ready(function () {
                     $(".eliminar").click(function (e) { 
                         e.preventDefault();
                         let id_atractivos_naturales = $(this)[0].attributes[1].value
-                        console.log(id_atractivos_naturales)
-                        //eliminar_atractivos_naturales(id_atractivos_naturales)
+                        eliminar_atractivos_naturales(id_atractivos_naturales)
                      });
 
                 } else {
                     console.log("Datos no cargados por: " + response.mensaje)
+                }
+            }
+        });
+    }
+
+    function eliminar_atractivos_naturales(id_atractivos_naturales){
+        let datos = {
+            'id_atractivos_naturales': id_atractivos_naturales
+        }    
+
+        $.ajax({
+            type: "POST",
+            url: "eliminar_an.php",
+            data: datos,
+            dataType: "JSON",
+            error: function(xhr, status){
+                console.log(xhr.responseText)
+            },
+            success: function (response) {
+                if (response.response === "exito") {
+                    console.log('Datos eliminados')
+                    traer_todos_an()//función que carga los datos de la base de datos en una tabla que se carga en el archivo html.
+                
+                } else {
+                    console.log("Datos no eliminados por: " + response.mensaje)
                 }
             }
         });

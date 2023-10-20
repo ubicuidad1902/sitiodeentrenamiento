@@ -3,7 +3,7 @@
 require_once "config.php"; //con require_once importo todo el código de otro archivo.
 
 $id_atractivos_naturales = $_POST["id_atractivos_naturales"];
-//echo $id_usuario;
+//echo $id_atractivos_naturales;
 
 if ($eliminado = eliminar_an($id_atractivos_naturales, $conn)) {
     
