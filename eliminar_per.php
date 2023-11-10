@@ -4,7 +4,6 @@ require_once "config.php"; //con require_once importo todo el código de otro ar
 
 $id_personajes = $_POST["id_personajes"];
 
-
 if ($eliminado = eliminar_per($id_personajes, $conn)) {
     
     $respuesta = [
