@@ -52,12 +52,42 @@ $(document).ready(function () {
                         `
                     }
                     $("#tb_per").html(registros)//punto es que invoco una función.
-                } else{
+                    $(".eliminar").click(function (e) { 
+                        e.preventDefault();
+                        let id_personajes = $(this)[0].attributes[1].value
+                        eliminar_personajes(id_personajes)
+                     });} else{
                     console.log("Datos no cargados por: " +response.mensaje)
                 }
             }
         });
     }
+
+    function eliminar_personajes(id_personajes){
+        let datos = {
+            'id_personajes': id_personajes
+        }    
+
+        $.ajax({
+            type: "POST",
+            url: "eliminar_per.php",
+            data: datos,
+            dataType: "JSON",
+            error: function(xhr, status){
+                console.log(xhr.responseText)
+            },
+            success: function (response) {
+                if (response.response === "exito") {
+                    console.log('Datos eliminados')
+                    traer_todos_personajes()//función que carga los datos de la base de datos en una tabla que se carga en el archivo html.
+                
+                } else {
+                    console.log("Datos no eliminados por: " + response.mensaje)
+                }
+            }
+        });
+    }
+
     /**
      * 
      * @param {object} formulario que contiene nombre, reseña, fecha y likes. 
